@@ -18,9 +18,9 @@ namespace web_formulario
             {
                 // 1. Creamos una lista de objetos "Auto" para mostrar.
                 List<Auto> lista = new List<Auto>();
-                lista.Add(new Auto { Modelo = "Corolla", Color = "Rojo", Usado = false, Importado = true });
-                lista.Add(new Auto { Modelo = "Focus", Color = "Azul", Usado = true, Importado = false });
-                lista.Add(new Auto { Modelo = "Cruze", Color = "Blanco", Usado = false, Importado = true });
+                //lista.Add(new Auto { Modelo = "Corolla", Color = "Rojo", Usado = false, Importado = true });
+                //lista.Add(new Auto { Modelo = "Focus", Color = "Azul", Usado = true, Importado = false });
+                //lista.Add(new Auto { Modelo = "Cruze", Color = "Blanco", Usado = false, Importado = true });
 
                 // 2. Asignamos la lista de autos como la fuente de datos de la grilla.
                 dgvAutos.DataSource = lista;
