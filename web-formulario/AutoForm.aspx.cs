@@ -18,6 +18,20 @@ namespace web_formulario
                 ddlColores.Items.Add("Blanco");
                 ddlColores.Items.Add("Rojo");
             }
+
+            if (Request.QueryString["id"] != null)
+            {
+                int id = int.Parse(Request.QueryString["id"].ToString());
+                List<Auto> temporal = (List<Auto>)Session["listaAutos"];
+                Auto seleccionado = temporal.Find (x => x.Id == id);
+                txtModelo.Text = seleccionado.Modelo;
+                txtId.Text = seleccionado.Id.ToString();
+                txtDescripcion.Text = seleccionado.Descripcion;
+                txtId.ReadOnly = true;
+            }
+
+
+
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)
@@ -43,7 +57,6 @@ namespace web_formulario
             temporal.Add(a);
 
             Response.Redirect("Default");
-
 
         }
 
