@@ -38,8 +38,11 @@ namespace web_formulario
                 a.Importado = false;
 
             //a la base de datos usando algún metodo
+            // ((List<Auto>)Session["listaAutos"]).Add(a)
+            List<Auto> temporal = (List<Auto>)Session["listaAutos"];
+            temporal.Add(a);
 
-
+            Response.Redirect("Default");
 
 
         }
